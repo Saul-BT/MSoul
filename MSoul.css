@@ -815,6 +815,7 @@ a.btn-ripple-cham, button.btn-ripple-cham {
 /*Default style*/
 a[class|="btn-cool"], button[class|="btn-cool"] {
 	position: relative;
+  z-index: 1;
   display: inline-block;
   cursor: pointer;
   outline: none;
