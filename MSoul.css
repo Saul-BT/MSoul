@@ -727,6 +727,199 @@ a.btn:active, button:active, input[type=\"submit\"]:active, input[type=\"reset\"
 box-shadow: 0px 0px 3px #3c3c3c;
 }
 
+/*BUTTON with ripple effect*/
+/*Default style*/
+a[class|="btn-ripple"], button[class|="btn-ripple"] {
+	position: relative;
+	margin: 5px;
+	padding: 7px 17px;
+	cursor: pointer;
+	outline: none;
+	display: inline-block;
+	text-decoration: none;
+	overflow: hidden;
+	color: #383838;
+	background-color: #ffffff;
+	font-size: 18px;
+  border: 0;
+	border-radius: 2px;
+	box-shadow: 0px 0px 8px #636363;
+	transition: 1s;
+}
+a[class|="btn-ripple"]:active, button[class|="btn-ripple"]:active {
+	box-shadow: 0px 0px 8px transparent;
+}
+a[class|="btn-ripple"] {
+  padding: 9px 17px;
+}
+a[class|="btn-ripple"]::before, button[class|="btn-ripple"]::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0;
+	background-color: rgba(0, 0, 0, 0.15);
+	border-radius: 100%;
+	transition: 1.5s;
+}
+a[class|="btn-ripple"]:active::before, button[class|="btn-ripple"]:active::before {
+	margin-left: -300px;
+	margin-top: -300px;
+	padding: 300px;
+}
+/*Blue*/
+a.btn-ripple-blue, button.btn-ripple-blue {
+	background-color: #42a9f4;
+}
+/*Green*/
+a.btn-ripple-green, button.btn-ripple-green {
+	background-color: #6dcc67;
+}
+/*Red*/
+a.btn-ripple-red, button.btn-ripple-red {
+	background-color: #b34f4f;
+}
+/*Orange*/
+a.btn-ripple-orange, button.btn-ripple-orange {
+	background-color: #eb8029;
+}
+/*Yellow*/
+a.btn-ripple-yellow, button.btn-ripple-yellow {
+	background-color: #f4dc42;
+}
+/*Purple*/
+a.btn-ripple-purple, button.btn-ripple-purple {
+	color: black;
+	background-color: #9d63f1;
+}
+/*Pink*/
+a.btn-ripple-pink, button.btn-ripple-pink {
+	background-color: #ee86ea;
+}
+/*Gray*/
+a.btn-ripple-gray, button.btn-ripple-gray {
+	background-color: #8e8e8e;
+}
+/*Black*/
+a.btn-ripple-black, button.btn-ripple-black {
+	color: #dedede;
+	background-color: #2d2d2d;
+}
+/*Chameleon*/
+a.btn-ripple-cham, button.btn-ripple-cham {
+	color: rgba(255, 255, 255, 8);
+	background-color: rgba(119, 119, 119, 0.4);
+}
+
+/*Cool BUTTONS*/
+/*Default style*/
+a[class|="btn-cool"], button[class|="btn-cool"] {
+	position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  border: 5px solid rgba(88, 88, 88, 0.25);
+  margin: 5px;
+  padding: 5px 20px;
+  color: #383838;
+	background-color: transparent;
+  font-size: 18px;
+}
+a[class|="btn-cool"] {
+  padding: 7px 20px;
+}
+a[class|="btn-cool"]::before, button[class|="btn-cool"]::before {
+	top: 0;
+	left: 0;
+}
+a[class|="btn-cool"]::after, button[class|="btn-cool"]::after {
+	top: 0;
+	right: 0;
+}
+a[class|="btn-cool"]::before, button[class|="btn-cool"]::before, a[class|="btn-cool"]::after, button[class|="btn-cool"]::after {
+	content: "";
+	position: absolute;
+	display: inline-block;
+	z-index: -1;
+	background-color: rgba(88, 88, 88, 0.25);
+	height: 32px;
+	width: 50%;
+	transition: .5s;
+}
+a[class|="btn-cool"]:hover::before, button[class|="btn-cool"]:hover::before, a[class|="btn-cool"]:hover::after, button[class|="btn-cool"]:hover::after {
+	width: 0%;
+}
+/*Blue*/
+a.btn-cool-blue, button.btn-cool-blue {
+	border: 5px solid rgba(27, 134, 186, 0.25);
+}
+a.btn-cool-blue::before, button.btn-cool-blue::before, a.btn-cool-blue::after, button.btn-cool-blue::after {
+	background-color: rgba(27, 134, 186, 0.25);
+}
+/*Green*/
+a.btn-cool-green, button.btn-cool-green {
+	border: 5px solid rgba(35, 186, 27, 0.25);
+}
+a.btn-cool-green::before, button.btn-cool-green::before, a.btn-cool-green::after, button.btn-cool-green::after {
+	background-color: rgba(35, 186, 27, 0.25);
+}
+/*Red*/
+a.btn-cool-red, button.btn-cool-red {
+	border: 5px solid rgba(186, 27, 27, 0.25);
+}
+a.btn-cool-red::before, button.btn-cool-red::before, a.btn-cool-red::after, button.btn-cool-red::after {
+	background-color: rgba(186, 27, 27, 0.25);
+}
+/*Orange*/
+a.btn-cool-orange, button.btn-cool-orange {
+	border: 5px solid rgba(255, 138, 0, 0.25);
+}
+a.btn-cool-orange::before, button.btn-cool-orange::before, a.btn-cool-orange::after, button.btn-btn-cool-orange::after {
+	background-color: rgba(255, 138, 0, 0.25);
+}
+/*Yellow*/
+a.btn-cool-yellow, button.btn-cool-yellow {
+	border: 5px solid rgba(255, 245, 0, 0.25);
+}
+a.btn-cool-yellow::before, button.btn-cool-yellow::before, a.btn-cool-yellow::after, button.btn-cool-yellow::after {
+	background-color: rgba(255, 245, 0, 0.25);
+}
+/*Purple*/
+a.btn-cool-purple, button.btn-cool-purple {
+	border: 5px solid rgba(130, 27, 186, 0.25);
+}
+a.btn-cool-purple::before, button.btn-cool-purple::before, a.btn-cool-purple::after, button.btn-cool-purple::after {
+	background-color: rgba(130, 27, 186, 0.25);
+}
+/*Pink*/
+a.btn-cool-pink, button.btn-cool-pink {
+	border: 5px solid rgba(249, 29, 213, 0.25);
+}
+a.btn-cool-pink::before, button.btn-cool-pink::before, a.btn-cool-pink::after, button.btn-cool-pink::after {
+	background-color: rgba(249, 29, 213, 0.25);
+}
+/*Gray: The default style*/
+/*Black*/
+a.btn-cool-black, button.btn-cool-black {
+	border: 5px solid rgba(0, 0, 0, 0.3);
+}
+a.btn-cool-black::before, button.btn-cool-black::before, a.btn-cool-black::after, button.btn-cool-black::after {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+/*Cham*/
+a.btn-cool-cham, button.btn-cool-cham {
+	color: rgba(255, 255, 255, 8);
+	border: 5px solid rgba(119, 119, 119, 0.4);
+	transition: .5s;
+}
+a.btn-cool-cham:hover, button.btn-cool-cham:hover {
+	color: rgba(119, 119, 119, 0.4);
+}
+a.btn-cool-cham::before, button.btn-cool-cham::before, a.btn-cool-cham::after, button.btn-cool-cham::after {
+	background-color: rgba(119, 119, 119, 0.4);
+}
+
 /*TAGS*/
 /*Default style*/
 div.tags > span, div.tags > a, div.tags > p, span.tag, a.tag, p.tag, div.tags > span, div.tags > a {
@@ -769,26 +962,4 @@ div.tags.pink > span, div.tags.pink > a, div.tags.pink > p, span.tag.pink, a.tag
 /*Black*/
 div.tags.black > span, div.tags.black > a, div.tags.black > p, span.tag.black, a.tag.black, p.tag.black, div.tags > span.black, div.tags > a.black, div.tags > p.black {
   background-color: rgba(0, 0, 0, 0.5);
-}
-footer {
-  overflow: hidden;
-  box-sizing: border-box;
-  width: 100%;
-  max-height: 300px;
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  flex-flow: row nowrap;
-}
-footer > div {
-  flex: 1;
-  padding: 5px;
-  text-align: center;
-}
-footer > div {
-  background-color: #dddddd;
-  box-shadow: inset 0px 0px 40px rgba(0, 0, 0, 0.1);
-}
-footer > div:first-child, footer > div:last-child {
-  background-color: #abdabb;
 }
